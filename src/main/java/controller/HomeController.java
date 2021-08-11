@@ -10,6 +10,6 @@ public class HomeController {
 
     @GetMapping
     public String home(){
-        return "Hello Azure!";
+        return "Hello Azure Changes!";
     }
 }

@@ -17,6 +17,11 @@ public class ViewerController {
     private ImagesServices imagesServices;
 
     @GetMapping
+    public String home(){
+        return "Hello Azure Changes!";
+    }
+
+    @GetMapping("/all")
     public List<Images> getListImages(){
         return imagesServices.getListImages();
     }
