@@ -10,6 +10,7 @@ import java.util.List;
 
 @RestController
 @RequestMapping("/view")
+@CrossOrigin
 public class ViewerController {
 
     @Autowired
