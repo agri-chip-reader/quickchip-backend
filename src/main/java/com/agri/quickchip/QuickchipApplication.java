@@ -8,6 +8,12 @@ import org.springframework.context.annotation.ComponentScan;
 import org.springframework.core.io.Resource;
 import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
 
+import javax.imageio.ImageIO;
+import javax.swing.*;
+import java.awt.*;
+import java.io.IOException;
+import java.net.URL;
+
 //import java.awt.*;
 //import com.microsoft.azure.storage.blob.StorageURL;
 
@@ -18,13 +24,9 @@ import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
 @EnableJpaRepositories("data.repositories")
 public class QuickchipApplication {
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws IOException {
+
         SpringApplication.run(QuickchipApplication.class, args);
     }
 
 }
-/*
-class ObjectStoregeServicesDemo{
-    ObjectStoregeServicesDemo(@Value("classpath:/agrilogo.png") Resource resource, ContainerURL){
-    }
-}*/

@@ -27,8 +27,8 @@ public class ViewerController {
     }
 
     @PostMapping("/add")
-    public Images addImage(@RequestBody UserInsert userInsert){
-        return imagesService.addImage(userInsert);
+    public void addImage(@RequestBody UserInsert userInsert){
+        imagesService.addImage(userInsert);
     }
 
     @GetMapping("/deleteAll")
