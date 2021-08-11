@@ -1,6 +1,6 @@
 package controller;
 
-import business.ImagesServices;
+import business.ImagesService;
 import data.entities.Images;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -14,7 +14,7 @@ import java.util.List;
 public class ViewerController {
 
     @Autowired
-    private ImagesServices imagesServices;
+    private ImagesService imagesService;
 
     @GetMapping
     public String home(){
@@ -23,11 +23,11 @@ public class ViewerController {
 
     @GetMapping("/all")
     public List<Images> getListImages(){
-        return imagesServices.getListImages();
+        return imagesService.getListImages();
     }
 
     @GetMapping("/add")
     public Images addImage(){
-        return imagesServices.addImage();
+        return imagesService.addImage();
     }
 }

@@ -10,7 +10,7 @@ import java.util.List;
 
 @Service
 @Transactional
-public class ImagesServices {
+public class ImagesService {
 
     @Autowired
     private ImageRepository imagesRepository;
