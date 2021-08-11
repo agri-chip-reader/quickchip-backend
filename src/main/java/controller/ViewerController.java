@@ -1,11 +1,10 @@
 package controller;
 
 import business.ImagesService;
+import data.dto.UserInsert;
 import data.entities.Images;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
@@ -22,12 +21,17 @@ public class ViewerController {
     }
 
     @GetMapping("/all")
-    public List<Images> getListImages(){
+    public List<String> getListImages(){
         return imagesService.getListImages();
     }
 
-    @GetMapping("/add")
-    public Images addImage(){
-        return imagesService.addImage();
+    @PostMapping("/add")
+    public Images addImage(@RequestBody UserInsert userInsert){
+        return imagesService.addImage(userInsert);
+    }
+
+    @GetMapping("/deleteAll")
+    public void deleteAll(){
+        imagesService.deleteImages();
     }
 }
